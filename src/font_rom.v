@@ -432,107 +432,107 @@ module font_rom (
         font_memory[111][5] = 8'b01000010;
         font_memory[111][6] = 8'b00111100;
         font_memory[111][7] = 8'b00000000;
-        
+        // ASCII 'p' (112)
         font_memory[112][0] = 8'b00000000;
         font_memory[112][1] = 8'b00000000;
-        font_memory[112][2] = 8'b01111100;
-        font_memory[112][3] = 8'b01000010;
-        font_memory[112][4] = 8'b01000010;
-        font_memory[112][5] = 8'b01111100;
+        font_memory[112][2] = 8'b01111000;
+        font_memory[112][3] = 8'b01000100;
+        font_memory[112][4] = 8'b01000100;
+        font_memory[112][5] = 8'b01111000;
         font_memory[112][6] = 8'b01000000;
         font_memory[112][7] = 8'b01000000;
 
-        // Letter 'q' (ASCII 113)
+        // ASCII 'q' (113)
         font_memory[113][0] = 8'b00000000;
         font_memory[113][1] = 8'b00000000;
-        font_memory[113][2] = 8'b00111110;
+        font_memory[113][2] = 8'b00111100;
         font_memory[113][3] = 8'b01000010;
         font_memory[113][4] = 8'b01000010;
         font_memory[113][5] = 8'b00111110;
         font_memory[113][6] = 8'b00000010;
         font_memory[113][7] = 8'b00000010;
 
-        // Letter 'r' (ASCII 114)
+        // ASCII 'r' (114)
         font_memory[114][0] = 8'b00000000;
         font_memory[114][1] = 8'b00000000;
-        font_memory[114][2] = 8'b01011100;
-        font_memory[114][3] = 8'b01100010;
+        font_memory[114][2] = 8'b01111000;
+        font_memory[114][3] = 8'b01000100;
         font_memory[114][4] = 8'b01000000;
         font_memory[114][5] = 8'b01000000;
         font_memory[114][6] = 8'b01000000;
         font_memory[114][7] = 8'b00000000;
 
-        // Letter 's' (ASCII 115)
+        // ASCII 's' (115)
         font_memory[115][0] = 8'b00000000;
         font_memory[115][1] = 8'b00000000;
-        font_memory[115][2] = 8'b00111110;
+        font_memory[115][2] = 8'b00111100;
         font_memory[115][3] = 8'b01000000;
         font_memory[115][4] = 8'b00111100;
         font_memory[115][5] = 8'b00000010;
         font_memory[115][6] = 8'b01111100;
         font_memory[115][7] = 8'b00000000;
 
-        // Letter 't' (ASCII 116)
-        font_memory[116][0] = 8'b00010000;
+        // ASCII 't' (116)
+        font_memory[116][0] = 8'b00000000;
         font_memory[116][1] = 8'b00010000;
         font_memory[116][2] = 8'b01111100;
         font_memory[116][3] = 8'b00010000;
         font_memory[116][4] = 8'b00010000;
-        font_memory[116][5] = 8'b00010010;
-        font_memory[116][6] = 8'b00001100;
+        font_memory[116][5] = 8'b00010000;
+        font_memory[116][6] = 8'b00111000;
         font_memory[116][7] = 8'b00000000;
 
-        // Letter 'u' (ASCII 117)
+        // ASCII 'u' (117)
         font_memory[117][0] = 8'b00000000;
         font_memory[117][1] = 8'b00000000;
-        font_memory[117][2] = 8'b01000010;
-        font_memory[117][3] = 8'b01000010;
-        font_memory[117][4] = 8'b01000010;
-        font_memory[117][5] = 8'b01000110;
-        font_memory[117][6] = 8'b00111010;
+        font_memory[117][2] = 8'b01000100;
+        font_memory[117][3] = 8'b01000100;
+        font_memory[117][4] = 8'b01000100;
+        font_memory[117][5] = 8'b01000100;
+        font_memory[117][6] = 8'b00111110;
         font_memory[117][7] = 8'b00000000;
 
-        // Letter 'v' (ASCII 118)
+        // ASCII 'v' (118)
         font_memory[118][0] = 8'b00000000;
         font_memory[118][1] = 8'b00000000;
-        font_memory[118][2] = 8'b01000010;
-        font_memory[118][3] = 8'b01000010;
-        font_memory[118][4] = 8'b01000010;
-        font_memory[118][5] = 8'b00100100;
-        font_memory[118][6] = 8'b00011000;
+        font_memory[118][2] = 8'b01000100;
+        font_memory[118][3] = 8'b01000100;
+        font_memory[118][4] = 8'b01000100;
+        font_memory[118][5] = 8'b00101000;
+        font_memory[118][6] = 8'b00010000;
         font_memory[118][7] = 8'b00000000;
 
-        // Letter 'w' (ASCII 119)
+        // ASCII 'w' (119)
         font_memory[119][0] = 8'b00000000;
         font_memory[119][1] = 8'b00000000;
-        font_memory[119][2] = 8'b01000010;
-        font_memory[119][3] = 8'b01000010;
-        font_memory[119][4] = 8'b01011010;
-        font_memory[119][5] = 8'b01011010;
-        font_memory[119][6] = 8'b00100100;
+        font_memory[119][2] = 8'b01000100;
+        font_memory[119][3] = 8'b01000100;
+        font_memory[119][4] = 8'b01010100;
+        font_memory[119][5] = 8'b01010100;
+        font_memory[119][6] = 8'b00101000;
         font_memory[119][7] = 8'b00000000;
 
-        // Letter 'x' (ASCII 120)
+        // ASCII 'x' (120)
         font_memory[120][0] = 8'b00000000;
         font_memory[120][1] = 8'b00000000;
-        font_memory[120][2] = 8'b01000010;
-        font_memory[120][3] = 8'b00100100;
-        font_memory[120][4] = 8'b00011000;
-        font_memory[120][5] = 8'b00100100;
-        font_memory[120][6] = 8'b01000010;
+        font_memory[120][2] = 8'b01000100;
+        font_memory[120][3] = 8'b00101000;
+        font_memory[120][4] = 8'b00010000;
+        font_memory[120][5] = 8'b00101000;
+        font_memory[120][6] = 8'b01000100;
         font_memory[120][7] = 8'b00000000;
 
-        // Letter 'y' (ASCII 121)
+        // ASCII 'y' (121)
         font_memory[121][0] = 8'b00000000;
         font_memory[121][1] = 8'b00000000;
-        font_memory[121][2] = 8'b01000010;
-        font_memory[121][3] = 8'b01000010;
-        font_memory[121][4] = 8'b01000010;
-        font_memory[121][5] = 8'b00111110;
-        font_memory[121][6] = 8'b00000010;
-        font_memory[121][7] = 8'b00111100;
+        font_memory[121][2] = 8'b01000100;
+        font_memory[121][3] = 8'b01000100;
+        font_memory[121][4] = 8'b00111110;
+        font_memory[121][5] = 8'b00000010;
+        font_memory[121][6] = 8'b00111100;
+        font_memory[121][7] = 8'b00000000;
 
-        // Letter 'z' (ASCII 122)
+        // ASCII 'z' (122)
         font_memory[122][0] = 8'b00000000;
         font_memory[122][1] = 8'b00000000;
         font_memory[122][2] = 8'b01111110;
@@ -542,54 +542,7 @@ module font_rom (
         font_memory[122][6] = 8'b01111110;
         font_memory[122][7] = 8'b00000000;
 
-        // Letter 'l' (ASCII 108) [For completeness]
-        font_memory[108][0] = 8'b00010000;
-        font_memory[108][1] = 8'b00010000;
-        font_memory[108][2] = 8'b00010000;
-        font_memory[108][3] = 8'b00010000;
-        font_memory[108][4] = 8'b00010000;
-        font_memory[108][5] = 8'b00010000;
-        font_memory[108][6] = 8'b00001100;
-        font_memory[108][7] = 8'b00000000;
-
-        // Letter 'e' (ASCII 101) [Already included, but highlighting for 'left']
-        font_memory[101][0] = 8'b00000000;
-        font_memory[101][1] = 8'b00000000;
-        font_memory[101][2] = 8'b00111100;
-        font_memory[101][3] = 8'b01000010;
-        font_memory[101][4] = 8'b01111110;
-        font_memory[101][5] = 8'b01000000;
-        font_memory[101][6] = 8'b00111100;
-        font_memory[101][7] = 8'b00000000;
-
-        // Letter 'f' (ASCII 102) [Already included, but highlighting for 'left']
-        font_memory[102][0] = 8'b00001100;
-        font_memory[102][1] = 8'b00010010;
-        font_memory[102][2] = 8'b00010000;
-        font_memory[102][3] = 8'b00111100;
-        font_memory[102][4] = 8'b00010000;
-        font_memory[102][5] = 8'b00010000;
-        font_memory[102][6] = 8'b00010000;
-        font_memory[102][7] = 8'b00000000;
-
-        // Letter 't' (ASCII 116) [Already included, but highlighting for 'left']
-        font_memory[116][0] = 8'b00010000;
-        font_memory[116][1] = 8'b00010000;
-        font_memory[116][2] = 8'b01111100;
-        font_memory[116][3] = 8'b00010000;
-        font_memory[116][4] = 8'b00010000;
-        font_memory[116][5] = 8'b00010010;
-        font_memory[116][6] = 8'b00001100;
-        font_memory[116][7] = 8'b00000000;
-
-        // Continue adding letters 'p' to 'z'...
-
-        // You can continue to fill in the rest of the lowercase letters
-        // using similar patterns for their bitmaps.
-
-        // Note: For brevity, the entire set of letters is not included here.
-        // You should add the rest of the lowercase letters 'p' to 'z' (ASCII 112 to 122)
-        // following the same structure as above.
+        
     end
 
     always @(*) begin
