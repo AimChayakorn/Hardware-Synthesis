@@ -52,22 +52,22 @@ module vga (
     );
 
     // Character display parameters
-    reg [7:0] text_buffer[0:4799]; // 80x60 character grid    
+    reg [7:0] text_buffer[0:79][0:59]; // 80x60 character grid    
     reg [7:0] current_char;
     wire [7:0] bitmap;
     wire [2:0] row = v_counter[2:0];
     wire [2:0] col_bit = h_counter[2:0];
     reg pixel_on;
     
-    integer i=0; //row
-    integer j=0; //column
+    integer i=0;
+    integer j=0;
     integer x=0;
-    integer y =0;
+    integer y=0;
     always @(posedge clk) begin
         if (reset) begin
             for (x = 0; x < 80; x = x + 1) begin
                 for (y = 0; y < 60; y = y + 1) begin
-                    text_buffer[x][y] <= 8'b0;
+                    text_buffer[x][y] <= 8'b00000000;
                 end
             end
             i <= 0;
@@ -81,15 +81,16 @@ module vga (
                 end else begin
                     j <= j + 1;
                 end
-            end else if (i == 79) begin
-                i <= 0;
+            end
+            else if (i == 79) begin
+                i = 0;
                 if (j == 59) begin
-                    j <= 0;
+                    j = 0; // Wrap around to the top-left corner
                 end else begin
-                    j <= j + 1;
+                    j = j + 1; // Move to the next row
                 end
             end else begin
-                i <= i + 1;
+                i = i + 1; // Move to the next column
             end
         end
         ps_write_en <= write_en;

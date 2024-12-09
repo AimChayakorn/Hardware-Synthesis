@@ -19,10 +19,7 @@ module system(
     output wire [3:0] vgaGreen,  // VGA green signal (4 bits)
     output wire [3:0] vgaBlue    // VGA blue signal (4 bits)
     );
-    reg reset;
-    initial begin
-    reset = 0;
-    end
+
     assign JB[0] = 1'bz;        // High-Z for JB[0] (input mode)
     assign RsRx_b = JB[0];
     assign RsTx_b = JB[3];
@@ -41,6 +38,9 @@ module system(
     reg [7:0] data_kb, data_b;
     assign {char1,char0} = data_kb;
     reg push;
+    reg reset = 0;  
+    reg btnU_prev = 0;
+    reg btnU_rising;
 //    assign char1 = data_sw;
     assign {char3,char2} = data_b;
     wire an0,an1,an2,an3;
@@ -71,11 +71,11 @@ module system(
         end
         if (~ps_kb& received_keyboard) begin //receive from kb
                 data_send_board <= data_receive_keyboard;
-//                data_send_keyboard <= data_receive_keyboard;
+                //data_send_keyboard <= data_receive_keyboard;
                 data_kb <= data_receive_keyboard;
                 data <= data_receive_keyboard;
                 en_b <= 1;
-//                en_k <= 1;
+                //en_k <= 1;
         end
         if (~push & btnC) begin
             en_b <=1;
@@ -86,13 +86,24 @@ module system(
             data <= sw[7:0];
             push <= 1;
         end
-        if (~btnC) push <= 0;
+        
+        if (~btnC) begin
+            push <= 0; 
+        end
+       
+        if (btnU_rising) begin
+            reset <= 1;   // Set reset high for one cycle
+        end else begin
+            reset <= 0;   // Return to 0 otherwise
+        end
+       
         ps_kb <= received_keyboard;
         ps_b <= received_board;
-        
-        if(~btnU) reset<=1;
-        if (btnU & reset) reset <= 0;
+        btnU_prev <= btnU;
+        btnU_rising <= btnU & ~btnU_prev;
     end
+
+    
     wire clk_25mhz;
 
     // VGA display module
